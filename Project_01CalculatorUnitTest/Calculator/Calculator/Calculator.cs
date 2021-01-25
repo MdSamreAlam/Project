@@ -6,20 +6,34 @@ namespace Calculator
 {
    public class Calculator
     {
-        public int Add(int number1,int number2)
+        public double Add(double number1,double number2)
         {
             var result= number1 + number2;
             return result;
         }
-        public int Subtract(int number1, int number2)
+        public double Subtract(double number1, double number2)
         {
             var result = number1 - number2;
             return result;
         }
-        public int Mul(int number1, int number2)
+        public double Mul(double number1, double number2)
         {
             var result = number1 * number2;
             return result;
+        }
+        public  double Divide(double number1, double number2)
+        {
+            if(number2 != 0)
+            {
+                var result = number1 / number2;
+                return result;
+            }
+            else
+            {
+                // Custome Business Logic for Divide By Zero
+                return 0;
+            }
+            
         }
     }
 }
